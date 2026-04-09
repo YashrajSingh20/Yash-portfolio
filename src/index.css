@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-text-main font-sans;
+  }
+}
+
+/* Futuristic Tech Grid Background */
+.tech-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 219, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 219, 0, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+  z-index: -1;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  @apply bg-surface/40 backdrop-blur-md border border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+}
+
+.glass-panel:hover {
+  @apply border-primary/40 shadow-[0_0_20px_rgba(255,219,0,0.15)] transition-all duration-300;
+}
+
+/* Neon Glow Effects */
+.neon-text {
+  /* Removed glow effect for simpler text */
+}
+.neon-border {
+  box-shadow: 0 0 10px rgba(255, 219, 0, 0.3), inset 0 0 10px rgba(255, 219, 0, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505; 
+}
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFDB00; 
+}
