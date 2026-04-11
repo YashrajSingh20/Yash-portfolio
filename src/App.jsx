@@ -225,10 +225,10 @@ export default function App() {
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start items-center">
                 <a href="#projects" className="px-8 py-3 bg-primary text-background font-bold rounded-[4px] hover:bg-white transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(255,219,0,0.4)]">
-                  View Database <Database className="h-5 w-5" />
+                  View Projects <Database className="h-5 w-5" />
                 </a>
                 <a href="#contact" className="px-8 py-3 bg-transparent border-2 border-primary text-primary font-bold rounded-[4px] hover:bg-primary/10 transition-colors shadow-[inset_0_0_10px_rgba(255,219,0,0.1)]">
-                  Establish Uplink
+                  Contact Me
                 </a>
                 <a href="https://www.linkedin.com/in/yash-41abb8336/" target="_blank" rel="noopener noreferrer" className="p-3 bg-transparent border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all rounded-[4px] shadow-[0_0_10px_rgba(255,219,0,0.2)]" title="LinkedIn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
@@ -310,18 +310,17 @@ export default function App() {
         {/* --- Projects Section --- */}
         <section id="projects" className="py-24">
           <FadeInSection>
-            <div className="flex items-center gap-4 mb-16">
-              <div className="h-px bg-gradient-to-l from-primary/50 to-transparent flex-grow max-w-sm hidden md:block"></div>
-              <a 
-                href="https://github.com/YashrajSingh20" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3 hover:text-primary transition-colors cursor-pointer group"
-                title="View my GitHub Profile"
-              >
-                <Folder className="text-primary neon-text group-hover:scale-110 transition-transform" /> Data Repositories
-              </a>
-              <div className="h-px bg-gradient-to-r from-primary/50 to-transparent flex-grow max-w-sm"></div>
+            <div className="flex flex-col items-center gap-2 mb-16">
+              <div className="flex items-center gap-4 w-full justify-center">
+                <div className="h-px bg-gradient-to-l from-primary/50 to-transparent flex-grow max-w-sm hidden md:block"></div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">
+                  <Folder className="text-primary neon-text" /> Projects
+                </h2>
+                <div className="h-px bg-gradient-to-r from-primary/50 to-transparent flex-grow max-w-sm"></div>
+              </div>
+              <p className="text-sm font-mono text-red-500 mt-2 text-center w-full drop-shadow-[0_0_8px_rgba(239,68,68,0.6)] font-semibold">
+                // click on the project name or the file icon present to get github repository  //
+              </p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
@@ -407,7 +406,7 @@ export default function App() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 text-primary font-mono text-sm mb-6 bg-primary/5">
               <Zap className="w-4 h-4" /> Final Protocol
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Establish Uplink</h2>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Contact Me</h2>
             <p className="text-text-muted mb-12 text-lg leading-relaxed font-light px-4">
               I'm actively scanning the network for a full-time role or internship where I can deploy my predictive modeling and data analysis algorithms to drive your business growth. My communication ports are open!
             </p>
