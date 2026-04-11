@@ -147,7 +147,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-text-main font-sans selection:bg-primary/30 selection:text-white relative z-0">
+    <div className="min-h-screen w-full overflow-x-hidden bg-background text-text-main font-sans selection:bg-primary/30 selection:text-white relative z-0">
       <div className="tech-grid pointer-events-none"></div>
 
       {/* Navigation */}
@@ -312,9 +312,15 @@ export default function App() {
           <FadeInSection>
             <div className="flex items-center gap-4 mb-16">
               <div className="h-px bg-gradient-to-l from-primary/50 to-transparent flex-grow max-w-sm hidden md:block"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">
-                <Folder className="text-primary neon-text" /> Data Repositories
-              </h2>
+              <a 
+                href="https://github.com/YashrajSingh20" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3 hover:text-primary transition-colors cursor-pointer group"
+                title="View my GitHub Profile"
+              >
+                <Folder className="text-primary neon-text group-hover:scale-110 transition-transform" /> Data Repositories
+              </a>
               <div className="h-px bg-gradient-to-r from-primary/50 to-transparent flex-grow max-w-sm"></div>
             </div>
 
