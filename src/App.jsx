@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Code, Globe, Mail, ExternalLink, Menu, X, ChevronRight, Terminal, User, Briefcase, Folder, Send, Cpu, Database, Zap, Sparkles } from 'lucide-react';
+import { Code, Globe, Mail, ExternalLink, Menu, X, ChevronRight, Terminal, User, Briefcase, Folder, Send, Cpu, Database, Zap, Sparkles, Phone } from 'lucide-react';
 
 const FadeInSection = ({ children, delay = 0 }) => {
   const [isVisible, setVisible] = useState(false);
@@ -212,7 +212,7 @@ export default function App() {
           <div className="flex-1 text-center md:text-left z-10">
             <FadeInSection>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-primary/30 text-primary font-mono text-sm mb-6 animate-pulse-glow">
-                <Sparkles className="w-4 h-4" /> Initiating sequence...
+                <Sparkles className="w-4 h-4" /> Open for opportunities
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
                 Hey, I'm <br /><span className="text-primary neon-text">Yashraj Singh.</span>
@@ -494,6 +494,9 @@ export default function App() {
             </a>
             <a href="mailto:bayasyashraj8@gmail.com" className="p-3 glass-panel rounded-full text-text-muted hover:text-primary transition-all hover:scale-110 hover:shadow-[0_0_15px_rgba(255,219,0,0.3)]" title="Email">
               <Mail className="h-5 w-5" />
+            </a>
+            <a href="tel:+91XXXXXXXXXX" className="p-3 glass-panel rounded-full text-text-muted hover:text-primary transition-all hover:scale-110 hover:shadow-[0_0_15px_rgba(255,219,0,0.3)]" title="Phone">
+              <Phone className="h-5 w-5" />
             </a>
           </div>
           <p className="text-text-muted font-mono text-sm opacity-80">
