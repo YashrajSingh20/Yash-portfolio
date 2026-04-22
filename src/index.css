@@ -35,11 +35,11 @@
 
 /* Glassmorphism Panel */
 .glass-panel {
-  @apply bg-surface/40 backdrop-blur-md border border-white/5 shadow-[0_8px_32px_0_rgba(0, 0, 0, 0.3)];
+  @apply bg-surface/40 backdrop-blur-md border border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
 }
 
 .glass-panel:hover {
-  @apply border-primary/40 shadow-[0_0_20px_rgba(255, 219, 0, 0.15)] transition-all duration-300;
+  @apply border-primary/40 shadow-[0_0_20px_rgba(255,219,0,0.15)] transition-all duration-300;
 }
 
 /* Neon Glow Effects */
