@@ -97,6 +97,13 @@ export default function App() {
 
   const projects = [
     {
+      title: "MedXpert — Digital Healthcare Platform",
+      description: "SaaS prototype digitizing hospital prescription workflows. Built role-based dashboards with UHID-based patient identification. Engineered digital prescriptions with fuzzy drug search, voice input, and auto-generated PDFs. Designed Supabase backend with Row-Level Security.",
+      tags: ["React", "TypeScript", "Supabase", "PostgreSQL"],
+      github: "https://github.com/YashrajSingh20/MedXpert-Final",
+      live: "https://med-xpert-final.vercel.app/"
+    },
+    {
       title: "FinSight — Autonomous Multi-Agent Financial Intelligence System",
       description: "Orchestrated a 4-agent LangGraph pipeline that autonomously generates analyst-grade PDF reports. Built a specialized team of AI agents for scraping live pricing, RSS news feeds, and SEC filings. Engineered a market analysis engine integrating Prophet and Isolation Forest for detecting anomalies.",
       tags: ["Python", "LangGraph", "LangChain", "FinBERT", "ChromaDB", "Groq API", "Prophet", "Docker"],
@@ -108,13 +115,6 @@ export default function App() {
       description: "Engineered a secure Django REST Framework backend with 19 API operations for patients, doctors, and care assignments. Built a live DRF console to monitor real-time network requests and implemented 3-tier Role-Based Access Control ensuring complete data isolation.",
       tags: ["Python", "Django", "DRF", "JavaScript", "HTML/CSS", "PostgreSQL"],
       github: "https://github.com/YashrajSingh20/MediLink",
-      live: "#"
-    },
-    {
-      title: "MedXpert — Digital Healthcare Platform",
-      description: "SaaS prototype digitizing hospital prescription workflows. Built role-based dashboards with UHID-based patient identification. Engineered digital prescriptions with fuzzy drug search, voice input, and auto-generated PDFs. Designed Supabase backend with Row-Level Security.",
-      tags: ["React", "TypeScript", "Supabase", "PostgreSQL"],
-      github: "https://github.com/YashrajSingh20/MedXpert-Final",
       live: "#"
     }
   ];
