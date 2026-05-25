@@ -97,23 +97,23 @@ export default function App() {
 
   const projects = [
     {
-      title: "KYC Verification - AI-Powered Identity System",
-      description: "A secure, full-stack identity verification ecosystem combining advanced computer vision with a premium user experience. Features real-time facial matching, automated ID document processing, and a high-fidelity 'Midnight Aurora' futuristic dark UI.",
-      tags: ["React.js", "Python", "FastAPI", "OpenCV", "dlib"],
-      github: "https://github.com/YashrajSingh20/kyc-verification",
+      title: "FinSight — Autonomous Multi-Agent Financial Intelligence System",
+      description: "Orchestrated a 4-agent LangGraph pipeline that autonomously generates analyst-grade PDF reports. Built a specialized team of AI agents for scraping live pricing, RSS news feeds, and SEC filings. Engineered a market analysis engine integrating Prophet and Isolation Forest for detecting anomalies.",
+      tags: ["Python", "LangGraph", "LangChain", "FinBERT", "ChromaDB", "Groq API", "Prophet", "Docker"],
+      github: "https://github.com/YashrajSingh20/FinSight-Autonomous-Multi-Agent-Financial-Intelligence-System-",
       live: "#"
     },
     {
-      title: "SmartRetail Intelligence Platform",
-      description: "Built a full-stack AI platform to analyze and predict e-commerce customer behavior. Features a Random Forest Churn Predictor, a 30-day Prophet Time-Series Revenue Forecast, and an AI Product Recommendation engine.",
-      tags: ["Python", "FastAPI", "Streamlit", "PostgreSQL", "XGBoost", "Prophet", "Docker"],
-      github: "https://github.com/YashrajSingh20/SmartRetail-Intelligence-Platform",
+      title: "MediLink — Healthcare Management Platform",
+      description: "Engineered a secure Django REST Framework backend with 19 API operations for patients, doctors, and care assignments. Built a live DRF console to monitor real-time network requests and implemented 3-tier Role-Based Access Control ensuring complete data isolation.",
+      tags: ["Python", "Django", "DRF", "JavaScript", "HTML/CSS", "PostgreSQL"],
+      github: "https://github.com/YashrajSingh20/MediLink",
       live: "#"
     },
     {
-      title: "MedXpert - Digital Healthcare Platform",
-      description: "A full-stack web app to digitize prescriptions for Doctors, Patients & Medical Stores. Features AI handwriting recognition, voice input, UHID records, PDF generation, and a futuristic dark UI.",
-      tags: ["React 18", "TypeScript", "TailwindCSS", "Dexie.js", "Tesseract.js"],
+      title: "MedXpert — Digital Healthcare Platform",
+      description: "SaaS prototype digitizing hospital prescription workflows. Built role-based dashboards with UHID-based patient identification. Engineered digital prescriptions with fuzzy drug search, voice input, and auto-generated PDFs. Designed Supabase backend with Row-Level Security.",
+      tags: ["React", "TypeScript", "Supabase", "PostgreSQL"],
       github: "https://github.com/YashrajSingh20/MedXpert-Final",
       live: "#"
     }
