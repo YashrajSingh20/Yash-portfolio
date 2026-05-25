@@ -326,32 +326,45 @@ export default function App() {
             <div className="grid lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <FadeInSection key={project.title} delay={index * 150}>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="glass-panel p-8 rounded-xl h-full flex flex-col group relative overflow-hidden block cursor-pointer">
+                  <div className="glass-panel p-8 rounded-xl h-full flex flex-col group relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-16 h-16 bg-primary/10 rounded-bl-full -z-10 group-hover:bg-primary/20 transition-colors"></div>
                     <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
-                    <div className="flex justify-between items-start mb-8">
-                      <Folder className="h-12 w-12 text-primary drop-shadow-[0_0_8px_rgba(255,219,0,0.5)] transform group-hover:scale-110 transition-transform" />
-                      <div className="flex gap-4">
-                        <span className="text-text-muted group-hover:text-primary transition-colors hover:drop-shadow-[0_0_8px_rgba(255,219,0,0.8)]">
+                    <div className="flex justify-between items-start mb-8 relative z-10">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="cursor-pointer" title="GitHub Repository">
+                        <Folder className="h-12 w-12 text-primary drop-shadow-[0_0_8px_rgba(255,219,0,0.5)] transform group-hover:scale-110 transition-transform" />
+                      </a>
+                      <div className="flex gap-4 items-center">
+                        {project.live && project.live !== "#" && (
+                          <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-text-muted hover:text-primary transition-colors hover:drop-shadow-[0_0_8px_rgba(255,219,0,0.8)]" title="Live Preview">
+                            <span className="text-sm font-mono font-semibold">Live</span>
+                            <ExternalLink className="h-5 w-5" />
+                          </a>
+                        )}
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors hover:drop-shadow-[0_0_8px_rgba(255,219,0,0.8)]" title="Source Code">
                           <Code className="h-6 w-6" />
-                        </span>
+                        </a>
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-text-muted mb-8 flex-grow leading-relaxed font-light">
+                    
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="relative z-10 block w-fit">
+                      <h3 className="text-2xl font-bold text-white mb-4 hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                    </a>
+                    
+                    <p className="text-text-muted mb-8 flex-grow leading-relaxed font-light relative z-10">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mt-auto">
+                    
+                    <div className="flex flex-wrap gap-2 mt-auto relative z-10">
                       {project.tags.map(tag => (
                         <span key={tag} className="text-xs font-mono text-secondary px-2 py-1 border border-secondary/20 bg-secondary/5 rounded">
                           {tag}
                         </span>
                       ))}
                     </div>
-                  </a>
+                  </div>
                 </FadeInSection>
               ))}
             </div>
