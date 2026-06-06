@@ -7,32 +7,53 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#050505',
-        surface: '#111111',
-        primary: '#FFDB00', // Futuristic Yellow
-        secondary: '#FFF68F',
+        background: '#FFD700', // Vibrant Yellow Background
+        surface: '#FFFFFF', // White cards
+        primary: '#FFD700', // Yellow
+        secondary: '#000000', // Black
+        tertiary: '#FFFFFF', // White
+        accent1: '#FF6B6B', // Red/Pink
+        accent2: '#4D96FF', // Blue
+        border: '#000000',
         text: {
-          main: '#ffffff',
-          muted: '#a3a3a3'
+          main: '#000000',
+          muted: '#222222'
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['Archivo Black', 'sans-serif'],
         mono: ['Fira Code', 'monospace'],
       },
+      boxShadow: {
+        'brutal': '8px 8px 0px 0px rgba(0,0,0,1)',
+        'brutal-lg': '16px 16px 0px 0px rgba(0,0,0,1)',
+        'brutal-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+      },
       animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'spin-slow': 'spin 8s linear infinite',
+        'marquee': 'marquee 25s linear infinite',
+        'marquee-fast': 'marquee 8s linear infinite',
+        'spin-slow': 'spin 6s linear infinite',
+        'wiggle': 'wiggle 0.5s ease-in-out infinite',
+        'bounce-slight': 'bounce-slight 1.5s infinite',
+        'pulse-fast': 'pulse-fast 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-15px)' },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
-        'pulse-glow': {
-          '0%, 100%': { opacity: 1, boxShadow: '0 0 20px rgba(255, 219, 0, 0.2)' },
-          '50%': { opacity: .7, boxShadow: '0 0 40px rgba(255, 219, 0, 0.5)' },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-5deg) scale(1)' },
+          '50%': { transform: 'rotate(5deg) scale(1.1)' },
+        },
+        'bounce-slight': {
+          '0%, 100%': { transform: 'translateY(-10%)' },
+          '50%': { transform: 'translateY(0)' },
+        },
+        'pulse-fast': {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.5 },
         }
       }
     },
