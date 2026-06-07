@@ -89,10 +89,31 @@ export default function App() {
     { name: 'Contact', href: '#contact' },
   ];
 
-  const skills = [
-    "Python", "SQL", "Pandas", "NumPy", "Scikit-learn",
-    "NLTK", "Matplotlib", "Seaborn", "Power BI", "Tableau",
-    "FastAPI", "React.js", "Git", "GitHub", "Jupyter", "GCP", "AWS", "Docker"
+  const skillCategories = [
+    {
+      title: "Languages",
+      skills: ["Python", "SQL", "HTML", "CSS", "TypeScript", "JavaScript"]
+    },
+    {
+      title: "Databases",
+      skills: ["MySQL", "PostgreSQL", "NoSQL", "MongoDB", "ChromaDB (VectorDB)"]
+    },
+    {
+      title: "AI/ML & Data Science",
+      skills: ["Machine Learning", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Prophet", "XGBoost", "LangGraph", "LangChain", "FinBERT"]
+    },
+    {
+      title: "Frameworks",
+      skills: ["Django", "Flask", "Django REST Framework", "REST API Design", "FastAPI", "Docker"]
+    },
+    {
+      title: "Tools",
+      skills: ["Git/GitHub", "CI/CD", "Power BI", "Streamlit", "Postman", "Jupyter Notebook"]
+    },
+    {
+      title: "Soft Skills",
+      skills: ["Teamwork", "Problem-Solving", "Communication", "Adaptability"]
+    }
   ];
 
   const projects = [
@@ -210,6 +231,7 @@ export default function App() {
           {/* Floating Brutalist Shapes */}
           <div className="hidden md:block absolute top-20 right-[15%] w-24 h-24 bg-accent1 border-4 border-black rounded-full shadow-brutal z-0 pointer-events-none"></div>
           <div className="hidden md:block absolute bottom-32 left-[10%] text-9xl text-accent2 font-display z-0 pointer-events-none select-none">*</div>
+          <div className="hidden md:block absolute top-1/2 left-[40%] w-16 h-16 bg-white border-4 border-black transform rotate-12 z-0 pointer-events-none"></div>
 
           <div className="flex-1 text-center md:text-left z-10 mt-10 md:mt-0 relative">
             <FadeInSection>
@@ -276,51 +298,83 @@ export default function App() {
           <FadeInSection>
             <div className="flex items-center gap-4 mb-12">
               <h2 className="text-4xl md:text-5xl font-display text-black uppercase bg-primary px-4 py-2 border-4 border-black shadow-brutal inline-flex items-center gap-3">
-                <Zap className="h-8 w-8 animate-wiggle" /> System Specs
+                <Zap className="h-8 w-8 animate-wiggle" /> About Me & Skills
               </h2>
             </div>
 
-            <div className="brutal-panel p-8 md:p-12 relative bg-white">
+            <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start relative z-10">
               
-              {/* Decorative tape */}
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-yellow-200/80 border-2 border-black transform -rotate-2 z-10 opacity-70"></div>
-
-              <div className="relative z-10">
-                <div className="bg-black text-white p-6 md:p-8 font-mono text-lg space-y-6 shadow-brutal mb-12 border-4 border-black text-left relative z-10">
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+              {/* Terminal Box (Left Col: takes up 2 cols) */}
+              <div className="lg:col-span-2 space-y-8">
+                <div className="bg-black text-white p-6 md:p-8 font-mono text-base space-y-6 shadow-[8px_8px_0px_rgba(255,107,107,1)] border-4 border-black text-left relative z-10 transform -rotate-1 hover:rotate-0 transition-transform">
+                  
+                  {/* Fake window controls */}
+                  <div className="flex items-center gap-2 mb-6 border-b-2 border-gray-700 pb-4">
+                    <div className="w-3 h-3 rounded-full bg-accent1 border border-black"></div>
+                    <div className="w-3 h-3 rounded-full bg-primary border border-black"></div>
+                    <div className="w-3 h-3 rounded-full bg-accent2 border border-black"></div>
+                    <span className="ml-2 text-xs text-gray-400 font-sans">yashraj_sys_profile.exe</span>
+                  </div>
+                  
+                  <div className="flex flex-col gap-2">
                     <span className="text-primary font-bold whitespace-nowrap">{">"} SYSTEM_INIT:</span>
                     <p className="text-gray-300">I am Yashraj Singh, a Data Scientist specializing in architecting end-to-end data pipelines and extracting high-value intelligence from raw, unstructured data. Recent B.Tech Data Science graduate from CMR University.</p>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                  <div className="flex flex-col gap-2">
                     <span className="text-accent1 font-bold whitespace-nowrap">{">"} CORE_MODULES:</span>
                     <p className="text-gray-300">Beyond analytics, I engineer predictive machine learning models and deploy secure, scalable full-stack web applications to deliver complete data-driven solutions.</p>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                  <div className="flex flex-col gap-2">
                     <span className="text-accent2 font-bold whitespace-nowrap">{">"} STATUS_CHECK:</span>
                     <p className="text-gray-300">Actively seeking a high-impact operational environment (full-time or internship) to deploy my skills for strategic growth. <span className="animate-pulse font-bold text-white">_</span></p>
                   </div>
                 </div>
-
-                <div className="bg-surface border-4 border-black p-6 shadow-brutal">
-                  <h3 className="text-2xl font-bold text-black mb-6 flex items-center gap-3 uppercase border-b-4 border-black pb-4">
-                    <Terminal className="h-6 w-6" /> Loaded Modules
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {skills.map((skill, i) => {
-                      const colors = ['bg-primary text-black', 'bg-secondary text-white', 'bg-tertiary text-black', 'bg-white text-black'];
-                      const randomColor = colors[i % colors.length];
-                      return (
-                        <span
-                          key={skill}
-                          className={`px-4 py-2 border-2 border-black font-bold ${randomColor} shadow-brutal hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-crosshair uppercase text-sm`}
-                        >
-                          {skill}
-                        </span>
-                      )
-                    })}
-                  </div>
+                
+                {/* Decorative sticker */}
+                <div className="bg-primary border-4 border-black px-4 py-3 shadow-brutal inline-block transform rotate-3 font-bold uppercase text-black">
+                  <span className="text-lg">"Data is the new oil." 🛢️</span>
                 </div>
               </div>
+
+              {/* Skills Box (Right Col: takes up 3 cols) */}
+              <div className="lg:col-span-3 bg-white border-4 border-black p-6 md:p-8 shadow-brutal relative transform hover:-translate-y-1 transition-transform">
+                {/* Decorative tape */}
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-yellow-200/80 border-2 border-black transform -rotate-2 z-10 opacity-70 hidden md:block"></div>
+                
+                <h3 className="text-3xl font-display text-black mb-8 flex items-center gap-3 uppercase border-b-8 border-primary pb-4">
+                  <Terminal className="h-8 w-8 text-black" /> Technical Skills
+                </h3>
+                
+                <div className="grid sm:grid-cols-2 gap-x-8 gap-y-10">
+                  {skillCategories.map((category, index) => {
+                    const bgColors = ['bg-accent1', 'bg-accent2', 'bg-primary'];
+                    const headerBg = bgColors[index % bgColors.length];
+                    
+                    return (
+                      <div key={category.title}>
+                        <h4 className={`text-xl font-bold text-black uppercase mb-4 inline-block ${headerBg} px-3 py-1 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)] transform -skew-x-6`}>
+                          {category.title}
+                        </h4>
+                        <div className="flex flex-wrap gap-2 mt-2">
+                          {category.skills.map((skill, i) => {
+                            const colors = ['bg-primary text-black', 'bg-white text-black', 'bg-tertiary text-black', 'bg-gray-100 text-black'];
+                            const randomColor = colors[(index + i) % colors.length];
+                            return (
+                              <span
+                                key={skill}
+                                className={`px-3 py-1.5 border-2 border-black font-bold ${randomColor} shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-crosshair uppercase text-xs sm:text-sm`}
+                              >
+                                {skill}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
             </div>
           </FadeInSection>
         </section>
